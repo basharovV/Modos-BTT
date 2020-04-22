@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script type="module" src="./App.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="modos-toolbar" class="fade-out">
+        <div id="app-section">
+            <i id="loading-spinner" class="show fa fa-spinner fa-spin"></i>
+            <img id="current-app-icon" /> 
+            <h2 id="current-app-name"></h2>
+            <div class="hide" id="current-app-window-count-container">
+                <p id="current-app-window-count"></p>
+            </div>
+            <h5 id="current-window-name"></h5>
+        </div>
+        <div id="mode-section">
+            <div class="keyboard-controls" id="keyboard-controls-left">
+                <p>Press left key</p>
+            </div>
+            <ul id="mode-list"></ul>
+            <i id="on-off" class="off fa fa-power-off"></i>
+            <div class="keyboard-controls" id="keyboard-controls-right">
+                <p>Press right key</p>
+            </div>
+        </div>
+        <div id="action-section">
+            <div class="text-button" id="save-button">Save</div>
+            <div class="text-button" id="restore-button">Restore</div>
+            <!-- <div class="text-button" >Close</div> -->
+            <i class="fa fa-close" id="close-button" style="font-size:20px;"></i>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

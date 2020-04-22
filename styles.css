@@ -1,0 +1,239 @@
+/*
+WINDOW
+*/
+
+html {
+    width: 100%;
+    height: 100%;
+    font-family: -apple-system, Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    -moz-user-select: none;
+    overflow: hidden;
+}
+
+/*
+TOOLBAR
+*/
+#modos-toolbar {
+    height: 28px;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border-top: solid 1px rgba(102, 102, 102, 0.526);
+    background-color: rgba(25, 25, 25, 0.8);
+    color: white;
+    transition: all 0.4s ease-in;
+}
+
+#modos-toolbar:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.841);
+}
+
+.modos-toolbar-selected {
+    box-shadow: rgb(0, 113, 170) 2px 2px;
+    margin: 23px 17px 0 17px;
+    opacity: 1;
+}
+
+.modos-toolbar-default {
+    box-shadow: rgb(27, 27, 27) 4px 4px;
+    margin: 26px 15px 0 15px;
+    opacity: 1;
+}
+
+
+/*
+
+LEFT SECTION - APP & WINDOW INFO
+
+*/
+
+#app-section {
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 0;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#current-app-icon {
+    width: 35px;
+    height: auto;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+#current-window-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    margin-left: 10px;
+    color: gray;
+    font-weight: normal;
+    max-width: 350px;
+}
+
+#current-app-window-count-container {
+    margin-left: 5px;
+    border-radius: 40px;
+    padding: 3px 7px;
+    background-color: rgba(128, 128, 128, 0.3);
+}
+
+#current-app-window-count {
+    font-size: 8pt;
+    color: rgb(182, 182, 182);
+}
+
+/*
+MIDDLE SECTION - MODES
+*/
+
+#current-mode {
+    opacity: 1;
+}
+
+#mode-list {
+    list-style: none;
+    display: inline-flex;
+    padding: 0;
+    margin: 0;
+    pointer-events: all;
+}
+
+.mode-list-item {
+    margin: 0;
+    padding: 0;
+    opacity: 0.3;
+}
+
+.mode-list-item:not(:first-child) {
+    margin-left: 10px;
+    padding: 0;
+}
+
+.mode-list-item:hover {
+    opacity: 0.7;
+}
+
+#mode-list {
+    color: white;
+}
+
+#mode-section {
+    background-color: rgba(0, 0, 0, 0.149);
+    border-radius: 15px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-grow: auto;
+    flex-basis: 1;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: width 0.5s ease-in-out;
+}
+
+/** ON OFF **/
+
+#on-off {
+    margin-left: 10px;
+}
+
+.on {
+    opacity: 1;
+    color: rgb(0, 162, 255);
+}
+
+.off {
+    opacity: 0.3;
+}
+
+/*
+KEYBOARD CONTROLS (when toolbar is clicked)
+*/
+.keyboard-controls {
+    font-size: 9pt;
+}
+
+#keyboard-controls-left {
+    margin-right: 10px;
+    transition: opacity 0.5s ease-in;
+}
+
+#keyboard-controls-right {
+    margin-left: 10px;
+    transition: opacity 0.5s ease-in;
+}
+
+.show {
+    opacity: 1;
+}
+
+.hide {
+    opacity: 0;
+    display: none !important;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+
+/*
+RIGHT SECTION - ACTIONS
+*/
+
+#action-section {
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 0;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.text-button {
+    font-size: 10pt;
+    color: gray;
+}
+
+#restore-button {
+    margin-left: 10px;
+}
+
+#close-button {
+    margin-left: 10px;
+    color: gray;
+}
+
+#close-button:hover {
+    color: white;
+}
+
+.text-button:hover {
+    color: white;
+}
+
+h1, h2, h3, h4, h5, p {
+    margin: 0;
+}
+
+#loading-spinner {
+    color: white;
+    font-size: 18pt;
+}
